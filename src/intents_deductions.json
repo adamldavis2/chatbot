@@ -34,7 +34,7 @@
          "responses": ["Use Form 1098. Here is a link to the form: https://www.irs.gov/pub/irs-pdf/f1098.pdf"],
          "context": ["mortgage_interest"]
         },
-        {"tag": "ev_credit",
+        {"tag": "ev_credit", 
          "patterns": ["I want to search for EV credit", "electric vehicle credit", "claim electric vehicle credit", "electric vehicle tax credit" ],
          "responses": ["Please see Notice 2009-89. Here is a link to the publication: https://www.irs.gov/irb/2009-48_IRB#NOT-2009-89"],
          "context": ["ev_form"]
