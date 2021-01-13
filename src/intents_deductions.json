@@ -30,7 +30,7 @@
          "context": ["charitable_deduction_tips"]
         },
         {"tag": "mortgage_deduction",
-         "patterns": ["How to deduct mortgage interest", "mortgage interest deduction"],
+         "patterns": ["How to deduct mortgage interest", "mortgage interest deduction", "mortgage interest deductions", "take mortgage interest deduction"],
          "responses": ["Use Form 1098. Here is a link to the form: https://www.irs.gov/pub/irs-pdf/f1098.pdf"],
          "context": ["mortgage_interest"]
         },
