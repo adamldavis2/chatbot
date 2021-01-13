@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>IRS Chatbot Prototype</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='./css/main.css') }}">
+</head>
+<body onload="scrollToEnd()">
+<script type="text/javascript" charset="utf-8">
+const scrollToEnd = () => {
+    document.getElementById('message_box').scroll(0, document.getElementById('message_box').scrollHeight);
+};
+function htmlEntities(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function sendMessage(){
+    document.getElementById('message-input').value = '';
+	document.getElementById('send-button').click();
+}
+function isPressingEnter(e){
+    let k;
+    if(window.event){
+        k = e.keyCode;
+        if(k===13){
+            sendMessage();
+        }
+    }else if(e.which){
+        k = e.which;
+        if(k===13){
+            sendMessage();
+        }
+    }
+}
+</script>
+
+<h1 id="title">Machine Learners Chatbot</h1>
+
+<form action="{{ url_for('handle_data') }}" method="post">
+	<section id="chat_box">
+		<section id="message_box">
+		<pre>{{ messages }}</pre>
+		</section>
+
+		<section id="input_box">
+			<input type="text" autofocus onkeypress="return isPressingEnter(event)" required placeholder="Input message here"
+					name="message_input" id="message_input">
+			<button type="submit" id="send-button" name="send-button"  > >> </button> 
+		</section>
+	</section>
+
+	<!--section id="nickname_box">
+		<label id="nickname-label" for="nickname-input">Nickname: </label>
+		<input type="text" id="nickname-input" name="nickname_input" autocomplete="off" value="Guest">
+	</section-->
+</form>
+</body>
+</html>
