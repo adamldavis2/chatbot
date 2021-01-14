@@ -25,18 +25,43 @@
          "context": [""]
         },
         {"tag": "charitable_deduction",
-         "patterns": ["Tips for Charitable deductions", "How can I deduct charitable deductions?" ],
+         "patterns": ["Tips for Charitable deductions", "Can I deduct charitable deductions?" ],
          "responses": ["If your goal is a legitimate tax deduction, then you must be giving to a qualified organization. Also, you cannot deduct contributions made to specific individuals, political organizations and candidates. See IRS Publication 526, Charitable Contributions, for rules on what constitutes a qualified organization"],
          "context": ["charitable_deduction_tips"]
         },
+        {"tag": "charitable_deduction_noncash",
+         "patterns": ["Donate stocks", "Donate non-cash propery", "Vehicle donation" ],
+         "responses": ["Donations of stock or other non-cash property are usually valued at the fair market value of the property. Clothing and household items must generally be in good used condition or better to be deductible. Special rules apply to vehicle donations"],
+         "context": ["charitable_deduction_tips"]
+        },
+        {"tag": "charitable_donation_records",
+         "patterns": ["What kind of records I need to keep", "Record keeping for donations" ],
+         "responses": ["you must maintain a bank record, payroll deduction records or a written communication from the organization containing the name of the organization, the date of the contribution and amount of the contribution"],
+         "context": ["charitable_deduction_tips"]
+        },        
+        {"tag": "charitable_deduction_form",
+         "patterns": ["What form I need to deduct donations to Charity", "Form for Charitable contributions?" ],
+         "responses": ["To deduct a charitable contribution, you must file Form 1040 and itemize deductions on Schedule A"],
+         "context": ["charitable_deduction_form"]
+        },
+        {"tag": "charitable_deduction_form_8283",
+         "patterns": ["What form I need to use for non-cash donation exceeds $500" ],
+         "responses": ["If your total deduction for all noncash contributions for the year is over $500, you must complete and attach IRS Form 8283, Noncash Charitable Contributions, to your return"],
+         "context": ["charitable_deduction_form"]
+        },
+        {"tag": "charitable_cash_deduction_form_8283",
+         "patterns": ["What form I need to use for non-cash donation exceeds $5000", "Donated car value greater than $5000"],
+         "responses": ["If you donated an item or a group of similar items valued at more than $5,000 must also complete Section B of Form 8283, which generally requires an appraisal by a qualified appraiser."],
+         "context": ["charitable_deduction_form"]
+        },
         {"tag": "mortgage_deduction",
-         "patterns": ["How to deduct mortgage interest" ],
-         "responses": ["Use Form 1098"],
+         "patterns": ["How to deduct mortgage interest", "mortgage interest deduction", "mortgage interest deductions", "take mortgage interest deduction"],
+         "responses": ["Use Form 1098. Here is a link to the form: https://www.irs.gov/pub/irs-pdf/f1098.pdf"],
          "context": ["mortgage_interest"]
         },
-        {"tag": "ev_credit",
-         "patterns": ["I want to search for EV credit" ],
-         "responses": ["Please see publication XXX"],
+        {"tag": "ev_credit", 
+         "patterns": ["I want to search for EV credit", "electric vehicle credit", "claim electric vehicle credit", "electric vehicle tax credit" ],
+         "responses": ["Please see Notice 2009-89. Here is a link to the publication: https://www.irs.gov/irb/2009-48_IRB#NOT-2009-89"],
          "context": ["ev_form"]
         }
    ]
