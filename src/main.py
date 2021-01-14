@@ -69,20 +69,20 @@ def chatbot_response(msg):
 # Flask
 
 app = Flask(__name__, template_folder='templates', static_folder='static', static_url_path='/static/')
-messages = ""
+messages = [""]
 
 @app.route('/')
 def index():
     global messages
-    return render_template('index.html', messages=messages)
+    return render_template('index.html', messages=messages, num=len(messages))
 
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
     global messages
     msg = request.form['message_input']
-    messages += "YOU: " + msg + "\n"
-    messages += "BOT: " + chatbot_response(msg) + "\n"
-    return render_template('index.html', messages=messages)
+    messages.append("YOU: " + msg + "\n")
+    messages.append("BOT: " + chatbot_response(msg) + "\n")
+    return render_template('index.html', messages=messages, num=len(messages))
     
     
 # run the server

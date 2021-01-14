@@ -3,13 +3,10 @@ FROM python:3.8
 
 EXPOSE 5000
 
-WORKDIR /chatbot/
+WORKDIR /chatbot/src/
 
-COPY src/ src/
-COPY static/ static/
-COPY templates/ templates/
+COPY src/ ./
 
-RUN pip install tensorflow keras nltk
 RUN pip install flask
 
-CMD ["python", "src/main.py"]
+CMD ["python", "main.py"]
