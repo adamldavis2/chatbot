@@ -59,6 +59,11 @@
          "responses": ["Use Form 1098. Here is a link to the form: https://www.irs.gov/pub/irs-pdf/f1098.pdf"],
          "context": ["mortgage_interest"]
         },
+        {"tag": "mortgage_deduction_conditions",
+         "patterns": ["Conditions for mortgage interest deductions", "Eligibility for mortgage deductions"],
+         "responses": ["You can deduct mortage interest if the mortgage is a secured debt on a qualified home in which you have an ownership interest and you file 1040 or 1040SR"],
+         "context": ["mortgage_interest"]
+        },
         {"tag": "ev_credit", 
          "patterns": ["I want to search for EV credit", "electric vehicle credit", "claim electric vehicle credit", "electric vehicle tax credit" ],
          "responses": ["Please see Notice 2009-89. Here is a link to the publication: https://www.irs.gov/irb/2009-48_IRB#NOT-2009-89"],

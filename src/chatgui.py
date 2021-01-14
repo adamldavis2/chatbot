@@ -68,7 +68,10 @@ def chatbot_response(msg):
 import tkinter
 from tkinter import *
 
-
+def onEnter(event):
+    #print('Enter key pressed')
+    send()
+    
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
     EntryBox.delete("0.0",END)
@@ -103,6 +106,7 @@ ChatLog['yscrollcommand'] = scrollbar.set
 SendButton = Button(base, font=("Verdana",12,'bold'), text="Send", width="12", height=5,
                     bd=0, bg="#00599C", activebackground="#2491FF",fg='#ffffff',
                     command= send )
+base.bind('<Return>', onEnter)
 
 #Create the box to enter message
 EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial")
