@@ -88,6 +88,7 @@ def handle_data():
 # run the server
 if __name__ == '__main__':
   app.debug = True
-  app.run()
+  ##app.run() #use this for running without docker
+  app.run(debug=True, host='0.0.0.0')
   
   
